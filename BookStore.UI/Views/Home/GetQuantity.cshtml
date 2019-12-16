@@ -1,0 +1,12 @@
+﻿@model BookStore.Models.ViewModels.GetQuantityViewModel
+
+
+@using (Html.BeginForm("GetQuantity", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.LabelFor(x => Model.Book, "Get Quantity");
+    <br />
+    @Html.DropDownListFor(x => Model.Book, Model.Books)
+    <input type="submit" name="Submit" value="Get Quantity" />
+}

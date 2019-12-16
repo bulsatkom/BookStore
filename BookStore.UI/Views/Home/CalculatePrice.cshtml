@@ -1,0 +1,6 @@
+﻿@model BookStore.Models.ViewModels.CalculatePriceViewModel
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+<div>Your Books - @string.Join(", ", Model.bookArticles)</div>
+<div>Current Price - @Model.price.ToString("N2")</div>

@@ -1,0 +1,10 @@
+﻿@model BookStore.Models.ViewModels.ViewAllViewModel
+
+@foreach (var item in Model.Catalogs)
+{
+    <div>  @item.Key -  @Model.Discounts[item.Key]</div>
+    foreach (var it in item.Value)
+    {
+        <div>   -@it.Name  - @it.Price - @it.Quantity</div>
+    }
+}

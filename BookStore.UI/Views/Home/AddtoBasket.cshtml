@@ -1,0 +1,10 @@
+﻿@model BookStore.Models.ViewModels.AddtoBasketViewModel
+
+@using (Html.BeginForm("AddtoBasket", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.DropDownListFor(x => Model.book, Model.Books)
+
+    <input type="submit" name="Submit" id="Submit" value="Add To Basket" />
+}
